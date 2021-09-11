@@ -44,9 +44,10 @@ public class BookingServiceImplement implements BookingService{
     public Booking getBookinguserID(Long id) {
         Long n=0L;
         List<Booking> bd = bookingRepository.findByUserid(id);
-
+        System.out.println(bd);
         for (int i = 0; i<bd.size(); i++) {
             n=bd.get(i).getId();
+            System.out.println(n);
         }
         return bookingRepository.findById(n).orElse(null);
     }

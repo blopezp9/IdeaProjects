@@ -68,7 +68,7 @@ public class BookingController {
     @GetMapping(value = "/user/{id}")
     public ResponseEntity<Booking> listbookinUsergID(@PathVariable("id") Long id){
         Booking booking = bookingService.getBookinguserID(id);
-        if (booking.getId()==null){
+        if (booking==null){
             return ResponseEntity.noContent().build();
         }
         return ResponseEntity.ok(booking);
