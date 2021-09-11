@@ -6,8 +6,10 @@ spring:
     config:
       server:
         git:
-          uri: git@github.com:blopezp9/IdeaProjects.git
-          searchPath: config-data
+          uri: https://github.com/blopezp9/IdeaProjects.git
+          search-paths: config-data
+          username: ${GIT_USER}
+          password: ${GIT_PASSWORD}
   security:
     user:
       name: root
