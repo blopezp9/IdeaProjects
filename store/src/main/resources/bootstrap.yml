@@ -6,5 +6,11 @@ spring:
     config:
       server:
         git:
+          uri: git@github.com:blopezp9/IdeaProjects.git
+          searchPath: config-data
+  security:
+    user:
+      name: root
+      password: s3cr3t
 
 
