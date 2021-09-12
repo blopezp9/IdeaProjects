@@ -1,4 +1,5 @@
 package cloud.trabajo.entity;
+import cloud.trabajo.model.Booking;
 import lombok.*;
 import org.springframework.data.repository.NoRepositoryBean;
 import org.springframework.data.repository.config.RepositoryBeanDefinitionParser;
@@ -22,5 +23,8 @@ public class Users {
     private String name;
     @NotEmpty(message = "Los apellidos no deben estar vacíos")
     private String lastname;
+
+    @Transient
+    private Booking booking;
 
 }

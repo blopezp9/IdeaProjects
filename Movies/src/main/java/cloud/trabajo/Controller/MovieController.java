@@ -1,5 +1,7 @@
 package cloud.trabajo.Controller;
 
+import cloud.trabajo.client.BookingClient;
+import cloud.trabajo.client.ShowtimeClient;
 import cloud.trabajo.entity.Movies;
 import cloud.trabajo.service.MovieService;
 import com.fasterxml.jackson.core.JsonProcessingException;

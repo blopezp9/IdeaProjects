@@ -1,5 +1,8 @@
 package cloud.trabajo.entity;
 
+import cloud.trabajo.Model.Booking;
+import cloud.trabajo.Model.Movie;
+import cloud.trabajo.Model.Showtime;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -29,4 +32,10 @@ public class Movies {
 
     @Range(min = 1, max = 5, message = "El intervalo del rating es de 1 a 5")
     private int rating;
+
+    @Transient
+    private Booking booking;
+
+    @Transient
+    private Showtime showtime;
 }

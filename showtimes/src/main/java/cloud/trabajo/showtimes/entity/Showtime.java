@@ -18,10 +18,10 @@ public class Showtime {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @NotNull(message = "El ID es obligatorio")
-    private Long id;
-    @Temporal(TemporalType.DATE)
-    @NotNull(message = "La fecha es obligatoria")
-    private Date date;
-    private String movies;
+        private Long id;
+        @Temporal(TemporalType.DATE)
+        @NotNull(message = "La fecha es obligatoria")
+        private Date date;
+        private String movies;
 
 }
