@@ -8,11 +8,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
 
-@FeignClient(value = "booking-service")
-@RequestMapping(value = "/bookings")
+@FeignClient(value = "booking-service", fallback = BookingHystrixFallbackFactory.class)
 public interface BookingClient {
 
-    @GetMapping
+    @GetMapping(value = "/bookings")
     public ResponseEntity<List<Booking>> listBooking();
+
+
 
 }
