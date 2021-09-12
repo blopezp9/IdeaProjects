@@ -5,6 +5,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 
+import java.util.Collections;
 import java.util.List;
 
 @Component
@@ -13,11 +14,11 @@ public class BookingHystrixFallbackFactory implements BookingClient{
     public ResponseEntity<List<Booking>> listBooking() {
         
         
-       List<Booking> bookingBuilders = (List<Booking>) Booking.builder()
-                .id(0L)
-                .showtimeid(0L)
-                .userid(0L)
-                .movies("None");
+       List<Booking> bookingBuilders = Collections.singletonList(Booking.builder()
+               .id(0L)
+               .showtimeid(0L)
+               .userid(0L)
+               .movies("None").build());
 
 
         return ResponseEntity.ok(bookingBuilders);
